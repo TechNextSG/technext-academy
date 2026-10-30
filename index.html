@@ -5,23 +5,32 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#F4F7FD">
-<title>TechNext Academy</title>
-<meta name="description" content="Free seminars and hands-on bootcamps for Senior High and vocational schools in the Philippines: Odoo, AI tools and business software, with certificates students can show employers.">
+<title>TechNext Academy | Odoo &amp; AI Bootcamps for Senior High Schools</title>
+<meta name="description" content="Free school seminars and hands-on bootcamps in Odoo and AI tools for Senior High and vocational students in the Philippines, with verifiable certificates.">
 <meta property="og:title" content="TechNext Academy">
 <meta property="og:description" content="Learn the software real businesses run on. Free seminars and bootcamps for Senior High and vocational schools.">
 <meta property="og:image" content="https://technextsg.github.io/technext-academy/assets/og-technext-academy.jpg">
+<meta property="og:image:alt" content="TechNext Academy: Nexi the robot in a graduation cap on a varsity badge">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://technextsg.github.io/technext-academy/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://technextsg.github.io/technext-academy/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('js-anim');setTimeout(function(){document.documentElement.classList.remove('js-anim')},3200)}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Graduate&family=Yellowtail&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#16306B;--blue-700:#1E4691;--blue:#3167CA;--blue-300:#6FA0F5;--blue-100:#DDE7F8;--blue-050:#EAF0FB;
   --paper:#F4F7FD;--ink:#1F1F3D;--body:#4C4C63;--muted:#6E6E88;--line:#E2E6EF;
-  --gold:#C9971C;--gold-300:#F2C94C;--ok:#137A4A;
+  --gold:#C9971C;--gold-300:#F2C94C;--gold-ink:#8A6400;--ok:#137A4A;--on-navy:#C6D2EE;--on-navy-2:#A9B8DC;
   --serif:"Alfa Slab One","Rockwell","Georgia",serif;--script:"Yellowtail","Brush Script MT",cursive;--sans:"Inter",system-ui,"Segoe UI",sans-serif;--varsity:"Graduate","Rockwell",serif;
   --sh:0 1px 2px rgba(22,48,107,.08),0 22px 44px -26px rgba(22,48,107,.45);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
 body{font-variant-numeric:lining-nums;margin:0;background:#fff;color:var(--body);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:var(--serif);color:var(--navy);margin:0;font-weight:400;letter-spacing:0;line-height:1.1}
 a{color:var(--blue)}
@@ -29,7 +38,8 @@ img{max-width:100%}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
 .skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:10px 14px;border-radius:8px;z-index:99}
 .skip:focus{left:8px}
-:focus-visible{outline:3px solid var(--gold-300);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:6px}
+.strip :focus-visible,.cta :focus-visible,.dip.main :focus-visible{outline-color:var(--gold-300)}
 .sc{font:600 12.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--blue-700);margin:0}
 .hero .eyebrow{font:400 14px/1.3 var(--varsity);letter-spacing:.18em}
@@ -43,7 +53,8 @@ img{max-width:100%}
 .brand .acad{font:400 15px/1 var(--varsity);letter-spacing:.28em;color:var(--navy);padding-left:14px;border-left:2px solid var(--gold)}
 .nav{display:flex;align-items:center;gap:28px}
 .nav a{color:var(--ink);text-decoration:none;font:600 15px/1 var(--sans)}
-.nav a:hover{color:var(--blue)}
+.nav a:not(.btn){padding:15px 0}
+.nav a:not(.btn):hover{color:var(--blue)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;
   font:600 16px/1 var(--sans);text-decoration:none;touch-action:manipulation;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .2s,box-shadow .25s}
 .btn--primary{background:var(--navy);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.15) inset,0 14px 28px -14px rgba(22,48,107,.75)}
@@ -54,17 +65,21 @@ img{max-width:100%}
 .link{display:inline-flex;align-items:center;min-height:44px;font:600 16px/1 var(--sans);color:var(--navy);text-decoration:none;
   background:linear-gradient(var(--gold),var(--gold)) 0 calc(100% - 8px)/100% 1.5px no-repeat}
 .link:hover{color:var(--blue)}
-@media(max-width:900px){.nav a:not(.btn){display:none}}
+.mnav{display:none}
+@media(max-width:900px){.nav a:not(.btn){display:none}html{scroll-padding-top:136px}
+  .mnav{display:flex;border-top:1px solid var(--line)}
+  .mnav a{flex:1;display:flex;align-items:center;justify-content:center;min-height:44px;font:600 13.5px/1 var(--sans);color:var(--ink);text-decoration:none}
+  .mnav a+a{border-left:1px solid var(--line)}}
 @media(max-width:480px){.brand{gap:10px}.brand img{height:22px}.brand .acad{font-size:11px;letter-spacing:.2em;padding-left:10px}.nav .btn{padding:0 16px}.hide-sm{display:none}}
 
 /* ---------- hero ---------- */
-.hero{position:relative;overflow:clip;background:linear-gradient(180deg,#F7F9FE 0%,#EAF0FB 100%)}
+.hero{position:relative;overflow:clip;background:linear-gradient(180deg,#F7F9FE 0%,var(--blue-050) 100%)}
 .hero__bg{position:absolute;inset:0;pointer-events:none}
 .hero__bg .rays{position:absolute;right:-12%;top:-24%;width:960px;height:960px;border-radius:50%;
   background:repeating-radial-gradient(circle at center,transparent 0 46px,rgba(49,103,202,.08) 46px 47px);
   -webkit-mask-image:radial-gradient(circle,#000 30%,transparent 70%);mask-image:radial-gradient(circle,#000 30%,transparent 70%)}
 .hero__in{position:relative;z-index:4;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(24px,4vw,56px);align-items:center;
-  min-height:min(calc(100svh - 76px),860px);padding-top:clamp(48px,8vh,88px);padding-bottom:clamp(56px,8vh,96px)}
+  min-height:min(calc(100svh - 77px),860px);padding-top:clamp(88px,10vh,104px);padding-bottom:calc(clamp(32px,4vh,48px) + 46px)}
 .hero h1{font-family:var(--varsity);font-weight:400;font-size:clamp(2.8rem,5.6vw,5.3rem);line-height:1;text-transform:uppercase;color:var(--navy);margin:22px 0 30px;position:relative;letter-spacing:.01em}
 .hero h1 .l{display:block;-webkit-text-stroke:.07em #fff;paint-order:stroke fill;
   text-shadow:.045em 0 0 var(--gold),-.045em 0 0 var(--gold),0 .045em 0 var(--gold),0 -.045em 0 var(--gold),
@@ -76,11 +91,6 @@ img{max-width:100%}
   transform:rotate(-6deg);transform-origin:left center;margin:.04em 0 .02em .2em;text-shadow:.05em .06em 0 var(--navy)}
 .hero .sub{font-size:clamp(1.05rem,1.35vw,1.22rem);line-height:1.55;max-width:48ch;margin:0 0 34px;text-wrap:pretty}
 .ctas{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
-.proof{display:flex;margin:44px 0 0;padding:20px 0 0;border-top:1px solid rgba(22,48,107,.14);max-width:560px}
-.proof div{flex:1;padding-right:18px}
-.proof div+div{padding-left:18px;border-left:1px solid rgba(22,48,107,.14)}
-.proof b{display:block;font:400 32px/1 var(--serif);color:var(--navy)}
-.proof span{display:block;font-size:13.5px;line-height:1.35;margin-top:6px;color:var(--body)}
 
 /* lively varsity background */
 .hero__bg .panel{position:absolute;top:-10%;bottom:-10%;right:-12%;width:58%;transform:skewX(-9deg);transform-origin:0 100%;
@@ -89,9 +99,9 @@ img{max-width:100%}
 .hero__bg .panel .halftone{position:absolute;inset:0;background:radial-gradient(circle,rgba(255,255,255,.22) 1.4px,transparent 1.9px) 0 0/16px 16px;
   -webkit-mask-image:linear-gradient(200deg,#000 0%,transparent 60%);mask-image:linear-gradient(200deg,#000 0%,transparent 60%)}
 .hero__bg .bunting{position:absolute;left:0;top:0;width:100%;height:120px;z-index:2}
-.flag{transform-origin:0 0;animation:sway 3.2s ease-in-out infinite}
+.flag{transform-origin:0 0;animation:sway 3.2s ease-in-out 4}
 @keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
-.floaters .fl{position:absolute;display:block;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 6px 8px rgba(22,48,107,.18))}
+.floaters .fl{position:absolute;display:block;animation:floaty 6s ease-in-out 3;filter:drop-shadow(0 6px 8px rgba(22,48,107,.18))}
 .floaters .fl svg{display:block;width:100%;height:auto}
 .floaters .fl.dim{opacity:.45}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-18px) rotate(10deg)}}
@@ -100,13 +110,19 @@ img{max-width:100%}
 .hero__bg .ticker::before,.hero__bg .ticker::after{content:"TECHNEXT ACADEMY  ★  CLASS OF 2027  ★  CAREER-READY BOOTCAMP  ★  ODOO + AI SKILLS  ★  ";
   white-space:pre;font:400 17px/1 var(--varsity);letter-spacing:.2em;color:var(--gold-300);animation:tick 30s linear infinite;padding-right:0}
 @keyframes tick{to{transform:translateX(-100%)}}
-.hero__in{padding-top:clamp(96px,13vh,128px)!important;padding-bottom:calc(clamp(56px,8vh,96px) + 46px)!important}
-@media(max-width:900px){.hero__in{padding-top:84px!important}}
+.chip.bob{animation:bob 3.4s ease-in-out infinite}.chip.bob:nth-child(even){animation-duration:4s;animation-direction:reverse}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+.motion-toggle{position:absolute;z-index:6;right:clamp(16px,2vw,28px);bottom:58px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--navy);
+  background:#fff;color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:2px 2px 0 var(--gold)}
+.motion-toggle:focus-visible{outline-color:var(--gold-300)}
+@media(max-width:900px){.motion-toggle{top:16px;bottom:auto;right:12px}}
+.motion-toggle svg{width:16px;height:16px;fill:currentColor}.motion-toggle .i-play{display:none}
+.motion-toggle[aria-pressed=true] .i-play{display:block}.motion-toggle[aria-pressed=true] .i-pause{display:none}
 @media(max-width:900px){
   .hero__bg .panel{top:auto;bottom:-40px;left:-10%;right:-10%;width:auto;height:calc(min(460px,100vw - 32px)*1.13 + 40px);transform:skewY(-5deg);transform-origin:0 0;
     box-shadow:0 -12px 0 #fff,0 -24px 0 var(--gold-300),0 -32px 0 #fff,0 -46px 0 var(--navy)}
   .hero__bg .bunting{height:70px}
-  .floaters .fl:nth-child(n+7){display:none}
+  .floaters{display:none}
 }
 /* visual: varsity badge + Nexi (heavy, animated) */
 .hero__visual{position:relative;margin:0;width:100%;max-width:560px;justify-self:center;aspect-ratio:600/680;isolation:isolate}
@@ -122,9 +138,9 @@ img{max-width:100%}
 .nexi-wrap .cap{position:absolute;inset:0;width:100%;height:100%;overflow:visible;transform-origin:50.6% 8.8%}
 .speed{position:absolute;left:0;top:-30%;width:100%;height:45%;opacity:0;pointer-events:none}
 .speed path{fill:none;stroke:#fff;stroke-width:1.4;stroke-linecap:round;vector-effect:non-scaling-stroke}
-.pow{position:absolute;z-index:6;left:-12%;top:-3%;width:50%;height:auto;opacity:0;transform:scale(.2) rotate(-14deg);transform-origin:80% 90%;pointer-events:none;
+.pow{position:absolute;z-index:6;left:-16%;top:-15%;width:46%;height:auto;opacity:0;transform:scale(.2) rotate(-14deg);transform-origin:80% 90%;pointer-events:none;
   filter:drop-shadow(0 10px 16px rgba(22,48,107,.35))}
-.confetti{position:absolute;inset:0;z-index:7;pointer-events:none;overflow:visible}
+.confetti{position:absolute;inset:0;z-index:4;pointer-events:none;overflow:visible}
 .confetti i{position:absolute;left:50%;top:30%;width:10px;height:16px;border-radius:2px;opacity:0}
 .glint{position:absolute;z-index:6;left:47%;top:11%;width:46px;height:46px;opacity:0;pointer-events:none;
   background:conic-gradient(from 45deg,transparent 0 20%,#fff 25%,transparent 30% 45%,#fff 50%,transparent 55% 70%,#fff 75%,transparent 80% 95%,#fff 100%);
@@ -134,17 +150,16 @@ img{max-width:100%}
   font:700 13px/1 var(--sans);color:var(--navy);background:#fff;border:1.5px solid var(--navy);border-radius:999px;padding:9px 14px;
   box-shadow:3px 3px 0 var(--gold);translate:-50% -50%;z-index:5}
 .chip svg{width:14px;height:14px;fill:none;stroke:var(--ok);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-.chip:nth-child(1){left:3%;top:24%}.chip:nth-child(2){right:-4%;top:31%}.chip:nth-child(3){left:1%;top:60%}
-.chip:nth-child(4){right:-4%;top:62%}.chip:nth-child(5){left:60%;top:4%}
+.chip:nth-child(1){left:3%;top:24%}.chip:nth-child(2){right:-4%;top:12%}.chip:nth-child(3){left:1%;top:60%}
+.chip:nth-child(4){right:-4%;top:78%}.chip:nth-child(5){left:62%;top:0}
 @media(max-width:1100px){.chip:nth-child(1){left:0}.chip:nth-child(2){right:0}.chip:nth-child(3){left:0}.chip:nth-child(4){right:0}}
-@media(max-width:520px){.chip{font-size:11px;padding:7px 10px;translate:none}.chip:nth-child(5){display:none}.pow{width:52%;left:-4%;top:-4%}}
+@media(max-width:520px){.chip{font-size:11px;padding:7px 10px;translate:none}.chip:nth-child(1),.chip:nth-child(2),.chip:nth-child(5){display:none}.pow{width:44%;left:-4%;top:-8%}}
 @media(max-width:900px){
-  .hero__in{grid-template-columns:1fr;min-height:auto;padding-top:40px}
+  .hero__in{grid-template-columns:1fr;min-height:auto;padding-top:84px}
   .hero__visual{max-width:460px;margin:0 auto}
 }
 @media(max-width:520px){
   .hero h1{font-size:clamp(2.3rem,10.5vw,3rem)}
-  .proof b{font-size:28px}.proof span{font-size:12.5px}.proof div{padding-right:10px}.proof div+div{padding-left:10px}
   .ctas{gap:16px}
 }
 .js-anim [data-in],.js-anim [data-in-visual]{opacity:0}
@@ -154,8 +169,8 @@ img{max-width:100%}
 .strip::before,.strip::after{content:"";position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.6}
 .strip::before{top:8px}.strip::after{bottom:8px}
 .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:42px;padding-bottom:42px}
-.strip b{display:block;font:400 44px/1 var(--serif);color:#fff;text-shadow:3px 3px 0 var(--navy),5px 5px 0 var(--gold)}
-.strip span{font-size:14px;color:#C6D2EE}
+.strip b{display:block;font:400 44px/1 var(--serif);color:#fff;text-shadow:3px 3px 0 var(--blue)}
+.strip span{font-size:14px;color:var(--on-navy)}
 @media(max-width:760px){.strip .wrap{grid-template-columns:1fr 1fr}.strip b{font-size:38px}}
 
 section.sec{padding:clamp(72px,10vw,112px) 0}
@@ -163,27 +178,39 @@ section.sec{padding:clamp(72px,10vw,112px) 0}
 .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin:18px 0 14px}
 h2{text-wrap:balance}
 .sec-head h2 em,.schools h2 em{font-family:var(--script);font-style:normal;font-weight:400;font-size:1.18em;color:var(--blue);letter-spacing:0}
-.sec-head p{font-size:18px;margin:0}
+.sec-head p:not(.eyebrow){font-size:18px;margin:0}
+.sec .eyebrow,.students .eyebrow{font:400 14px/1.3 var(--varsity);letter-spacing:.18em}
+.schools h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin:18px 0 32px}
 
+/* ---------- students ---------- */
+.students{background:var(--blue-050);border-bottom:1px solid var(--line)}
+.students .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:32px 48px;align-items:center;padding-top:44px;padding-bottom:44px}
+.students h2{font-size:clamp(1.6rem,2.6vw,2.1rem);margin:12px 0 0}
+.students h2 em{font-family:var(--script);font-style:normal;font-size:1.18em;color:var(--blue)}
+.st{counter-reset:t;margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.st li{counter-increment:t;position:relative;padding-left:40px;color:var(--ink)}
+.st li::before{content:counter(t);position:absolute;left:0;top:-1px;width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold-300);display:grid;place-items:center;font:400 14px/1 var(--varsity)}
+.btn--ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy);box-shadow:3px 3px 0 var(--gold)}
+.btn--ghost:hover{transform:translateY(-2px)}
+@media(max-width:960px){.students .wrap{grid-template-columns:1fr}.students .btn{justify-self:start}}
 /* ---------- certificates as diplomas ---------- */
 .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .dip{position:relative;background:#fff;border-radius:8px;padding:34px 30px 28px;box-shadow:var(--sh);display:flex;flex-direction:column}
 .dip::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:4px;pointer-events:none}
-.dip.main{background:var(--navy);color:#C6D2EE}
+.dip.main{background:var(--navy);color:var(--on-navy)}
 .dip.main::before{border-color:rgba(242,201,76,.55)}
-.dip.main h3{color:#fff}.dip.main .who{color:var(--gold-300)}.dip.main li{border-color:rgba(255,255,255,.14)}.dip.main .foot{color:#A9B8DC}
-.dip .who{font:400 11.5px/1.3 var(--varsity);letter-spacing:.2em;color:var(--blue-700)}
+.dip.main h3{color:#fff}.dip.main .who{color:var(--gold-300)}.dip.main li{border-color:rgba(255,255,255,.14)}.dip.main .foot{color:var(--on-navy-2)}
+.dip .who{font:400 12.5px/1.3 var(--varsity);letter-spacing:.2em;color:var(--blue-700)}
 .dip h3{font-size:24px;margin:14px 0 14px}
 .dip p{margin:0 0 16px}
 .dip ul{margin:0 0 22px;padding:0;list-style:none}
 .dip li{padding:8px 0 8px 24px;position:relative;border-top:1px solid var(--line);font-size:15px}
 .dip li::before{content:"";position:absolute;left:3px;top:17px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
 .dip .foot{margin-top:auto;margin-bottom:0;font-size:13px;color:var(--muted)}
-.dip .logo{height:30px;width:auto;align-self:flex-start;margin:2px 0 14px}
 .badges{display:flex;gap:10px;margin:0 0 18px}
-.medal{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font:400 9.5px/1 var(--varsity);letter-spacing:.08em;color:#fff;position:relative}
+.medal{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;font:400 11px/1 var(--varsity);letter-spacing:.08em;color:#fff;position:relative}
 .medal::after{content:"";position:absolute;inset:4px;border-radius:50%;border:1.5px dashed rgba(255,255,255,.55)}
-.medal.b{background:radial-gradient(circle at 30% 30%,#E8A774,#9C5A2B)}
+.medal.b{background:radial-gradient(circle at 30% 30%,#9A5A2C,#5E2F10)}
 .medal.s{background:radial-gradient(circle at 30% 30%,#F4F6FA,#8A93A8);color:var(--ink)}
 .medal.g{background:radial-gradient(circle at 30% 30%,#FFE58A,#C98C00);color:var(--ink)}
 .disclaim{margin-top:28px;font-size:13.5px;color:var(--muted);max-width:900px}
@@ -194,7 +221,7 @@ h2{text-wrap:balance}
 .tgrid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(22,48,107,.18)}
 .tk{padding:30px 26px 10px;position:relative}
 .tk+.tk{border-left:1px solid rgba(22,48,107,.12)}
-.tk .rn{font:400 15px/1 var(--varsity);letter-spacing:.14em;color:var(--gold)}
+.tk .rn{font:400 15px/1 var(--varsity);letter-spacing:.14em;color:var(--gold-ink)}
 .tk svg{display:block;width:46px;height:46px;margin:22px 0 4px;stroke:var(--blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .tk svg .d{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.3s cubic-bezier(.6,0,.2,1)}
 .tk.on svg .d{stroke-dashoffset:0}
@@ -202,16 +229,17 @@ h2{text-wrap:balance}
 @keyframes wig{30%{transform:rotate(-8deg)}60%{transform:rotate(6deg)}}
 .tk h3{font-size:20px;margin:16px 0 8px}
 .tk p{font-size:15px;margin:0 0 14px}
-.tk .for{font:600 11.5px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tk .for{font:600 12.5px/1.4 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 @media(max-width:960px){.tgrid{grid-template-columns:1fr 1fr}.tk:nth-child(3){border-left:0}.tk:nth-child(n+3){border-top:1px solid rgba(22,48,107,.12)}}
 @media(max-width:560px){.tgrid{grid-template-columns:1fr}.tk+.tk{border-left:0;border-top:1px solid rgba(22,48,107,.12)}}
 
 /* ---------- formats ---------- */
 .ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.step{position:relative;padding:34px 30px 32px;border-radius:999px 999px 10px 10px;background:#fff;border:1px solid var(--line);text-align:center}
-.step:nth-child(3){background:var(--navy);border-color:var(--navy);color:#C6D2EE}
+.step{position:relative;padding:34px 30px 32px;border-radius:999px 999px 10px 10px;background:var(--paper);border:1.5px solid var(--blue-100);text-align:center}
+.step:nth-child(3){background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
 .step:nth-child(3) h3{color:#fff}
-.step .n{font:400 13px/1 var(--varsity);letter-spacing:.24em;color:var(--gold);display:block;margin-top:34px}
+.step .medal{margin:4px auto 0}
+.step .n{font:400 13px/1 var(--varsity);letter-spacing:.24em;color:var(--gold-ink);display:block;margin-top:18px}
 .step:nth-child(3) .n{color:var(--gold-300)}
 .step h3{font-size:25px;margin:14px 0 8px}
 .step .meta{font:600 13px/1.4 var(--sans);color:var(--blue-700);margin:0 0 14px}
@@ -221,37 +249,52 @@ h2{text-wrap:balance}
 
 /* ---------- schools ---------- */
 .schools{background:var(--paper);border-top:1px solid var(--line)}
-.schools .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.schools .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .how{counter-reset:s;margin:0;padding:0;list-style:none}
 .how li{counter-increment:s;position:relative;padding:0 0 28px 66px}
-.how li::before{content:counter(s,upper-roman);position:absolute;left:0;top:0;width:42px;text-align:center;font:400 18px/1.2 var(--varsity);color:var(--gold)}
+.how li::before{content:counter(s,upper-roman);position:absolute;left:0;top:0;width:42px;text-align:center;font:400 18px/1.2 var(--varsity);color:var(--gold-ink)}
 .how li::after{content:"";position:absolute;left:20px;top:32px;bottom:6px;width:1px;background:rgba(22,48,107,.2)}
 .how li:last-child::after{display:none}
 .how b{display:block;font:400 19px/1.3 var(--serif);color:var(--ink);margin-bottom:4px}
 .card{background:#fff;border-radius:8px;box-shadow:var(--sh);padding:30px;position:relative}
 .card::before{content:"";position:absolute;inset:8px;border:1px solid var(--line);border-radius:4px;pointer-events:none}
 .card h3{font-size:21px;margin-bottom:12px}
-.card ul{margin:0;padding-left:20px}.card li{margin:7px 0}
-.priv{margin-top:22px;padding:20px 22px;border-left:3px solid var(--gold);background:#fff;font-size:14.5px;color:var(--ink)}
+.card ul{margin:0;padding:0;list-style:none}.card li{margin:9px 0;padding-left:22px;position:relative}
+.card li::before{content:"";position:absolute;left:3px;top:10px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.priv{margin-top:22px;padding:20px 22px 20px 58px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:14.5px;color:var(--ink);position:relative}
+.priv svg{position:absolute;left:20px;top:20px;width:22px;height:22px;fill:none;stroke:var(--blue);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 @media(max-width:860px){.schools .wrap{grid-template-columns:1fr}}
 
+/* ---------- faq ---------- */
+.qa{max-width:860px;border-top:1px solid rgba(22,48,107,.18)}
+.qa details{border-bottom:1px solid rgba(22,48,107,.18)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:64px;padding:14px 0;font:400 19px/1.3 var(--serif);color:var(--navy)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--navy);display:grid;place-items:center;font:400 20px/1 var(--varsity);color:var(--navy);box-shadow:2px 2px 0 var(--gold);transition:transform .25s}
+.qa details[open] summary::after{transform:rotate(45deg)}
+.qa details p{margin:0 0 22px;max-width:68ch}
+.band{background:var(--gold-300);border-top:3px solid var(--navy);overflow:hidden;white-space:nowrap;padding:13px 0}
+.band span{display:block;font:400 17px/1 var(--varsity);letter-spacing:.2em;color:var(--navy);text-align:center}
 /* ---------- cta ---------- */
 .cta{position:relative;overflow:clip;background:var(--navy);color:#fff;padding:clamp(72px,9vw,100px) 0}
 .cta::before{content:"";position:absolute;inset:16px;border:1px solid rgba(242,201,76,.35);border-radius:4px;pointer-events:none}
 .cta .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:center;position:relative}
 .cta h2{color:#fff;font-size:clamp(2rem,4vw,3.2rem)}
 .cta h2 em{font-family:var(--script);font-style:normal;font-weight:400;font-size:1.15em;color:var(--gold-300)}
-.cta p{color:#C6D2EE;font-size:18px;margin:18px 0 32px;max-width:540px}
+.cta p{color:var(--on-navy);font-size:18px;margin:18px 0 32px;max-width:540px}
 .cta .btn--primary{background:var(--gold-300);color:var(--navy);box-shadow:0 16px 30px -16px rgba(0,0,0,.6)}
 .cta .btn--primary:hover{background:#fff}
 .cta .link{color:#fff}
+.cta p.alt{font-size:15px;margin:22px 0 0}.cta p.alt a{color:var(--gold-300)}
 .cta img{width:100%;max-width:330px;height:auto;justify-self:center;filter:drop-shadow(0 26px 30px rgba(0,0,0,.4));transform:rotate(6deg)}
-@media(max-width:760px){.cta .wrap{grid-template-columns:1fr}.cta img{max-width:220px}}
+@media(max-width:760px){.cta .wrap{grid-template-columns:1fr}.cta img{max-width:220px}.cta::before{inset:8px}}
 
 footer{padding:36px 0;font-size:13px;color:var(--muted);background:#fff}
 footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
 footer .brand img{height:24px}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.tk svg .d{stroke-dashoffset:0}}
+footer a:not(.brand){color:var(--navy)}
+footer a:not(.brand):hover{color:var(--blue)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.tk svg .d{stroke-dashoffset:0}.motion-toggle{display:none!important}}
 </style>
 </head>
 <body>
@@ -263,27 +306,24 @@ footer .brand img{height:24px}
     <img src="assets/technext-horizontal-blue.svg" alt="TechNext" width="160" height="22"><span class="acad">ACADEMY</span>
   </a>
   <nav class="nav" aria-label="Main">
-    <a href="#certifications">Certifications</a><a href="#tracks">Tracks</a><a href="#schools">For schools</a>
-    <a class="btn btn--primary" href="#book">Book<span class="hide-sm">&nbsp;a visit</span></a>
+    <a href="#certifications">Certifications</a><a href="#tracks">Tracks</a><a href="#schools">For schools</a><a href="#faq">FAQ</a>
+    <a class="btn btn--primary" href="#book">Book<span class="hide-sm">&nbsp;a</span>&nbsp;visit</a>
   </nav>
-</div></header>
+</div>
+<nav class="mnav" aria-label="Sections"><a href="#certifications">Certificates</a><a href="#tracks">Tracks</a><a href="#schools">Schools</a><a href="#faq">FAQ</a></nav>
+</header>
 
 <main id="main">
 <section class="hero" id="hero" aria-labelledby="hero-title">
-  <div class="hero__bg" aria-hidden="true"><div class="rays"></div><div class="panel"><div class="halftone"></div></div><svg class="bunting" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMin slice"><path d="M-20 18Q350 92 720 18Q1090 92 1460 18" fill="none" stroke="#16306B" stroke-width="2" opacity=".55"/><g transform="translate(41.7 29.3) rotate(9.5)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(103.3 38.6) rotate(7.6)"><g class="flag" style="animation-delay:-0.37s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(165.0 45.8) rotate(5.7)"><g class="flag" style="animation-delay:-0.74s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(226.7 50.9) rotate(3.8)"><g class="flag" style="animation-delay:-1.11s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(288.3 54.0) rotate(1.9)"><g class="flag" style="animation-delay:-1.48s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(350.0 55.0) rotate(0.0)"><g class="flag" style="animation-delay:-1.85s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(411.7 54.0) rotate(-1.9)"><g class="flag" style="animation-delay:-2.22s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(473.3 50.9) rotate(-3.8)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(535.0 45.8) rotate(-5.7)"><g class="flag" style="animation-delay:-0.37s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(596.7 38.6) rotate(-7.6)"><g class="flag" style="animation-delay:-0.74s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(658.3 29.3) rotate(-9.5)"><g class="flag" style="animation-delay:-1.11s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(781.7 29.3) rotate(9.5)"><g class="flag" style="animation-delay:-1.48s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(843.3 38.6) rotate(7.6)"><g class="flag" style="animation-delay:-1.85s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(905.0 45.8) rotate(5.7)"><g class="flag" style="animation-delay:-2.22s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(966.7 50.9) rotate(3.8)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1028.3 54.0) rotate(1.9)"><g class="flag" style="animation-delay:-0.37s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(1090.0 55.0) rotate(0.0)"><g class="flag" style="animation-delay:-0.74s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1151.7 54.0) rotate(-1.9)"><g class="flag" style="animation-delay:-1.11s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(1213.3 50.9) rotate(-3.8)"><g class="flag" style="animation-delay:-1.48s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1275.0 45.8) rotate(-5.7)"><g class="flag" style="animation-delay:-1.85s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(1336.7 38.6) rotate(-7.6)"><g class="flag" style="animation-delay:-2.22s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1398.3 29.3) rotate(-9.5)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g></svg><div class="floaters"><span class="fl " style="left:6%;top:78%;width:22px;animation-duration:6s;animation-delay:0.0s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#F2C94C"/></svg></span><span class="fl " style="left:44%;top:12%;width:40px;animation-duration:7s;animation-delay:-0.6s"><svg viewBox="0 0 40 30"><path d="M2 10L20 3L38 10L20 17Z" fill="#16306B"/><path d="M10 13V20C14 24 26 24 30 20V13L20 17Z" fill="#1E4691"/><path d="M33 11V20" stroke="#F2C94C" stroke-width="2"/><circle cx="33" cy="21" r="2" fill="#F2C94C"/></svg></span><span class="fl " style="left:48%;top:70%;width:16px;animation-duration:5s;animation-delay:-1.2s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#3167CA"/></svg></span><span class="fl dim" style="left:3%;top:30%;width:34px;animation-duration:8s;animation-delay:-1.8s"><svg viewBox="0 0 40 30"><path d="M20 6C14 2 7 2 2 4V26C7 24 14 24 20 28C26 24 33 24 38 26V4C33 2 26 2 20 6Z" fill="#fff" stroke="#16306B" stroke-width="2"/><path d="M20 6V28" stroke="#16306B" stroke-width="2"/></svg></span><span class="fl " style="left:62%;top:22%;width:18px;animation-duration:5.5s;animation-delay:-2.4s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#FFFFFF"/></svg></span><span class="fl " style="left:95%;top:18%;width:24px;animation-duration:6.5s;animation-delay:-3.0s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#F2C94C"/></svg></span><span class="fl " style="left:90%;top:76%;width:42px;animation-duration:7.5s;animation-delay:-3.6s"><svg viewBox="0 0 40 30"><path d="M2 10L20 3L38 10L20 17Z" fill="#16306B"/><path d="M10 13V20C14 24 26 24 30 20V13L20 17Z" fill="#1E4691"/><path d="M33 11V20" stroke="#F2C94C" stroke-width="2"/><circle cx="33" cy="21" r="2" fill="#F2C94C"/></svg></span><span class="fl " style="left:70%;top:86%;width:14px;animation-duration:5s;animation-delay:-4.2s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#FFFFFF"/></svg></span><span class="fl " style="left:58%;top:52%;width:30px;animation-duration:8.5s;animation-delay:-4.8s"><svg viewBox="0 0 40 30"><path d="M20 6C14 2 7 2 2 4V26C7 24 14 24 20 28C26 24 33 24 38 26V4C33 2 26 2 20 6Z" fill="#fff" stroke="#16306B" stroke-width="2"/><path d="M20 6V28" stroke="#16306B" stroke-width="2"/></svg></span><span class="fl dim" style="left:36%;top:88%;width:14px;animation-duration:6s;animation-delay:-5.4s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#F2C94C"/></svg></span><span class="fl " style="left:97%;top:50%;width:16px;animation-duration:7s;animation-delay:-6.0s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#FFFFFF"/></svg></span></div><div class="ticker"></div></div>
+  <div class="hero__bg" aria-hidden="true"><div class="rays"></div><div class="panel"><div class="halftone"></div></div><svg class="bunting" viewBox="0 0 1440 120" preserveAspectRatio="xMidYMin slice"><path d="M-20 18Q350 92 720 18Q1090 92 1460 18" fill="none" stroke="#16306B" stroke-width="2" opacity=".55"/><circle cx="720" cy="20" r="10" fill="#F2C94C" stroke="#16306B" stroke-width="2.5"/><g transform="translate(41.7 29.3) rotate(9.5)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(103.3 38.6) rotate(7.6)"><g class="flag" style="animation-delay:-0.37s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(165.0 45.8) rotate(5.7)"><g class="flag" style="animation-delay:-0.74s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(226.7 50.9) rotate(3.8)"><g class="flag" style="animation-delay:-1.11s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(288.3 54.0) rotate(1.9)"><g class="flag" style="animation-delay:-1.48s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(350.0 55.0) rotate(0.0)"><g class="flag" style="animation-delay:-1.85s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(411.7 54.0) rotate(-1.9)"><g class="flag" style="animation-delay:-2.22s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(473.3 50.9) rotate(-3.8)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(535.0 45.8) rotate(-5.7)"><g class="flag" style="animation-delay:-0.37s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(596.7 38.6) rotate(-7.6)"><g class="flag" style="animation-delay:-0.74s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(658.3 29.3) rotate(-9.5)"><g class="flag" style="animation-delay:-1.11s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(781.7 29.3) rotate(9.5)"><g class="flag" style="animation-delay:-1.48s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(843.3 38.6) rotate(7.6)"><g class="flag" style="animation-delay:-1.85s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(905.0 45.8) rotate(5.7)"><g class="flag" style="animation-delay:-2.22s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(966.7 50.9) rotate(3.8)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1028.3 54.0) rotate(1.9)"><g class="flag" style="animation-delay:-0.37s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(1090.0 55.0) rotate(0.0)"><g class="flag" style="animation-delay:-0.74s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1151.7 54.0) rotate(-1.9)"><g class="flag" style="animation-delay:-1.11s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(1213.3 50.9) rotate(-3.8)"><g class="flag" style="animation-delay:-1.48s"><path d="M-17 0H17L0 40Z" fill="#3167CA"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1275.0 45.8) rotate(-5.7)"><g class="flag" style="animation-delay:-1.85s"><path d="M-17 0H17L0 40Z" fill="#FFFFFF" stroke="#16306B" stroke-width="1.5"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g><g transform="translate(1336.7 38.6) rotate(-7.6)"><g class="flag" style="animation-delay:-2.22s"><path d="M-17 0H17L0 40Z" fill="#16306B"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#F2C94C"/></g></g><g transform="translate(1398.3 29.3) rotate(-9.5)"><g class="flag" style="animation-delay:0.00s"><path d="M-17 0H17L0 40Z" fill="#F2C94C"/><polygon points="0,14 1.8,18.6 6.6,18.6 2.7,21.4 4.2,26 0,23.2 -4.2,26 -2.7,21.4 -6.6,18.6 -1.8,18.6" fill="#16306B"/></g></g></svg><div class="floaters"><span class="fl " style="left:62%;top:22%;width:18px;animation-duration:5.5s;animation-delay:-2.4s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#FFFFFF"/></svg></span><span class="fl " style="left:95%;top:18%;width:24px;animation-duration:6.5s;animation-delay:-3.0s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#F2C94C"/></svg></span><span class="fl " style="left:90%;top:76%;width:42px;animation-duration:7.5s;animation-delay:-3.6s"><svg viewBox="0 0 40 30"><path d="M2 10L20 3L38 10L20 17Z" fill="#16306B"/><path d="M10 13V20C14 24 26 24 30 20V13L20 17Z" fill="#1E4691"/><path d="M33 11V20" stroke="#F2C94C" stroke-width="2"/><circle cx="33" cy="21" r="2" fill="#F2C94C"/></svg></span><span class="fl " style="left:70%;top:86%;width:14px;animation-duration:5s;animation-delay:-4.2s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#FFFFFF"/></svg></span><span class="fl " style="left:58%;top:52%;width:30px;animation-duration:8.5s;animation-delay:-4.8s"><svg viewBox="0 0 40 30"><path d="M20 6C14 2 7 2 2 4V26C7 24 14 24 20 28C26 24 33 24 38 26V4C33 2 26 2 20 6Z" fill="#fff" stroke="#16306B" stroke-width="2"/><path d="M20 6V28" stroke="#16306B" stroke-width="2"/></svg></span><span class="fl " style="left:97%;top:50%;width:16px;animation-duration:7s;animation-delay:-6.0s"><svg viewBox="-10 -10 20 20"><polygon points="0,-9 2.6,-2.8 9,-2.8 3.8,1.2 5.6,7.6 0,3.8 -5.6,7.6 -3.8,1.2 -9,-2.8 -2.6,-2.8" fill="#FFFFFF"/></svg></span></div><div class="ticker"></div></div>
   <div class="wrap hero__in">
     <div class="hero__copy">
       <p class="eyebrow sc" data-in>For Senior High &amp; vocational schools</p>
-      <h1 id="hero-title" data-in><span class="l s1">Learn the</span><span class="l big">Software</span><span class="l scr">real businesses</span><span class="l">run&nbsp;on.</span></h1>
-      <p class="sub" data-in>Free seminars and hands-on bootcamps in Odoo and AI tools for work, held inside your school. Students graduate with certificates employers understand.</p>
+      <h1 id="hero-title" data-in><span class="l s1">Learn the</span> <span class="l big">Software</span> <span class="l scr">real businesses</span> <span class="l">run&nbsp;on.</span></h1>
+      <p class="sub" data-in>Free seminars and hands-on bootcamps in Odoo and AI tools for work, held inside your school. Students leave with certificates employers can check by QR code.</p>
       <div class="ctas" data-in>
         <a class="btn btn--primary" href="#book">Book a school visit <span class="arr" aria-hidden="true">&rarr;</span></a>
-        <a class="link" href="#certifications">See the certifications</a>
-      </div>
-      <div class="proof" data-in>
-        <div><b data-count="3">3</b><span>certificates to aim for</span></div>
-        <div><b data-count="4">4</b><span>career tracks</span></div>
-        <div><b data-count="142">142</b><span>ERP projects by TechNext</span></div>
+        <a class="link" href="#students">I&rsquo;m a student</a>
       </div>
     </div>
     <figure class="hero__visual" data-in-visual>
@@ -304,14 +344,14 @@ footer .brand img{height:24px}
 <circle cx="280" cy="290" r="190" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.2" stroke-dasharray="3 6"/>
 <text font-family="'Alfa Slab One',serif" font-size="34" letter-spacing="3" fill="#FFFFFF"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">TECHNEXT ACADEMY</textPath></text>
 <text font-family="Graduate,serif" font-size="21" letter-spacing="3" fill="#F2C94C"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">CAREER-READY BOOTCAMP</textPath></text>
-<text x="56" y="305" text-anchor="middle" font-family="'Alfa Slab One',serif" font-size="36" fill="#F2C94C">20</text>
-<text x="504" y="305" text-anchor="middle" font-family="'Alfa Slab One',serif" font-size="36" fill="#F2C94C">26</text>
+<polygon points="53.0,272.0 58.0,285.1 72.0,285.8 61.1,294.6 64.8,308.2 53.0,300.5 41.2,308.2 44.9,294.6 34.0,285.8 48.0,285.1" fill="#F2C94C"/>
+<polygon points="507.0,272.0 512.0,285.1 526.0,285.8 515.1,294.6 518.8,308.2 507.0,300.5 495.2,308.2 498.9,294.6 488.0,285.8 502.0,285.1" fill="#F2C94C"/>
 <polygon points="82.2,386.2 84.4,392.1 90.8,392.4 85.8,396.3 87.5,402.4 82.2,398.9 76.9,402.4 78.6,396.3 73.7,392.4 80.0,392.1" fill="#FFFFFF"/><polygon points="82.2,175.8 84.4,181.8 90.8,182.1 85.8,186.0 87.5,192.1 82.2,188.6 76.9,192.1 78.6,186.0 73.7,182.1 80.0,181.8" fill="#FFFFFF"/><polygon points="477.8,386.2 480.0,392.1 486.3,392.4 481.4,396.3 483.1,402.4 477.8,398.9 472.5,402.4 474.2,396.3 469.2,392.4 475.6,392.1" fill="#FFFFFF"/><polygon points="477.8,175.8 480.0,181.8 486.3,182.1 481.4,186.0 483.1,192.1 477.8,188.6 472.5,192.1 474.2,186.0 469.2,182.1 475.6,181.8" fill="#FFFFFF"/>
 <polygon points="160.0,165.0 161.2,168.3 164.8,168.5 162.0,170.6 162.9,174.0 160.0,172.1 157.1,174.0 158.0,170.6 155.2,168.5 158.8,168.3" fill="#fff"/><polygon points="412.0,190.0 413.0,192.6 415.8,192.8 413.6,194.5 414.4,197.2 412.0,195.7 409.6,197.2 410.4,194.5 408.2,192.8 411.0,192.6" fill="#fff"/><polygon points="430.0,326.5 430.9,328.8 433.3,328.9 431.4,330.5 432.1,332.8 430.0,331.5 427.9,332.8 428.6,330.5 426.7,328.9 429.1,328.8" fill="#fff"/>
 </svg>
 <div class="orbit" aria-hidden="true"><span class="chip">Odoo Sales</span><span class="chip">Claude AI</span><span class="chip"><svg viewBox="0 0 16 16"><path d="M3 8.5l3 3 7-7"/></svg>Certificate</span><span class="chip">OJT shortlist</span><span class="chip">Odoo Website</span></div>
 <div class="nexi-wrap">
-  <img class="nexi-base" src="assets/nexi-base.webp" width="960" height="929" alt="Nexi, the TechNext Academy mascot, in glasses and a graduation cap" fetchpriority="high" decoding="async">
+  <img class="nexi-base" src="assets/nexi-base.webp" srcset="assets/nexi-base-640.webp 640w, assets/nexi-base.webp 960w" sizes="(max-width:900px) min(290px,58vw), 353px" width="960" height="929" alt="Nexi, the TechNext Academy mascot, in glasses and a graduation cap" fetchpriority="high" decoding="async">
   <svg class="speed" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M38 40V8M50 36V2M62 40V8M44 30V12M56 30V12"/></svg>
   <svg class="cap" viewBox="0 197 1560 1510" aria-hidden="true"><defs> <linearGradient id="cap-skull" x1="0" y1="0" x2="1" y2="0"> <stop offset="0" stop-color="#14183a"/><stop offset=".45" stop-color="#2b3470"/><stop offset="1" stop-color="#10132e"/></linearGradient> <linearGradient id="cap-board" x1="0" y1="0" x2="1" y2="1"> <stop offset="0" stop-color="#3a4690"/><stop offset=".55" stop-color="#1f2556"/><stop offset="1" stop-color="#151938"/></linearGradient> <linearGradient id="cap-edge" x1="0" y1="0" x2="1" y2="0"> <stop offset="0" stop-color="#0d1030"/><stop offset=".5" stop-color="#1a1f4a"/><stop offset="1" stop-color="#0b0d26"/></linearGradient> <linearGradient id="cap-gold" x1="0" y1="0" x2="0" y2="1"> <stop offset="0" stop-color="#FFE27A"/><stop offset="1" stop-color="#E9A800"/></linearGradient> <radialGradient id="cap-shade" cx=".5" cy="0" r=".9"><stop offset="0" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient> <filter id="cap-soft"><feGaussianBlur stdDeviation="10"/></filter> </defs><g transform="rotate(-8 790 420)"> <path d="M548 470 C548 380 640 344 790 344 C940 344 1032 380 1032 470 C980 452 890 444 790 444 C690 444 600 452 548 470Z" fill="url(#cap-skull)"/> <path d="M560 462 C620 448 700 440 790 440 C880 440 960 448 1020 462" fill="none" stroke="#3167CA" stroke-width="6" opacity=".75"/> <path d="M370 318 L790 438 L1210 318 L1210 342 L790 462 L370 342Z" fill="url(#cap-edge)"/> <path d="M370 318 L790 198 L1210 318 L790 438Z" fill="url(#cap-board)"/> <path d="M370 318 L790 198 L1210 318" fill="none" stroke="#6FA0F5" stroke-width="5" opacity=".7" stroke-linejoin="round"/> <path d="M370 318 L790 438 L1210 318" fill="none" stroke="#0b0d26" stroke-width="3" opacity=".6"/> <ellipse cx="790" cy="318" rx="34" ry="13" fill="url(#cap-gold)"/> <path d="M790 318 C900 330 1030 360 1120 344 C1150 338 1168 350 1172 380 L1176 520" fill="none" stroke="url(#cap-gold)" stroke-width="11" stroke-linecap="round"/> <path d="M1158 516 L1194 516 L1206 640 C1190 652 1162 652 1146 640Z" fill="url(#cap-gold)"/> <rect x="1152" y="506" width="48" height="24" rx="8" fill="#E9A800"/> <path d="M1160 540 L1156 640 M1172 540 L1170 646 M1184 540 L1186 646 M1196 540 L1198 640" stroke="#C98C00" stroke-width="3" opacity=".7"/> </g></svg>
 </div>
@@ -336,14 +376,23 @@ footer .brand img{height:24px}
 <div class="glint" aria-hidden="true"></div>
 </figure>
   </div>
+  <button class="motion-toggle" type="button" aria-pressed="false" aria-label="Pause animations" hidden><svg class="i-pause" viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12" rx="1"/><rect x="9.5" y="2" width="3.5" height="12" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16"><path d="M4 2.5v11l9-5.5z"/></svg></button>
 </section>
 
 <div class="strip"><div class="wrap">
   <div><b>5,000</b><span>students we aim to train in SY 2026&ndash;27</span></div>
-  <div><b>40</b><span>partner schools</span></div>
+  <div><b>3</b><span>certificates to aim for</span></div>
   <div><b>4</b><span>career tracks</span></div>
   <div><b>142</b><span>ERP projects delivered by TechNext</span></div>
 </div></div>
+
+<section class="students" id="students">
+  <div class="wrap">
+    <div><p class="eyebrow sc">For students</p><h2>Want this at <em>your school?</em></h2></div>
+    <ol class="st"><li>Show this page to your SHS coordinator or principal.</li><li>Your school books a visit with TechNext.</li><li>You register through your school&rsquo;s QR form.</li></ol>
+    <a class="btn btn--ghost" href="mailto:?subject=Can%20our%20school%20join%20TechNext%20Academy%3F&amp;body=Hi%2C%20could%20our%20school%20book%20a%20free%20TechNext%20Academy%20seminar%20or%20bootcamp%20(Odoo%20and%20AI%20tools)%3F%20Details%3A%20https%3A%2F%2Ftechnextsg.github.io%2Ftechnext-academy%2F">Send this page to your teacher</a>
+  </div>
+</section>
 
 <section class="sec" id="certifications">
   <div class="wrap">
@@ -354,15 +403,14 @@ footer .brand img{height:24px}
       <article class="dip main">
         <span class="who">ISSUED BY TECHNEXT</span>
         <h3>TechNext Academy Certificate</h3>
-        <div class="badges"><span class="medal b">BRONZE</span><span class="medal s">SILVER</span><span class="medal g">GOLD</span></div>
-        <ul><li>Bronze: attend the 90-minute seminar</li><li>Silver: finish a 1-day bootcamp</li><li>Gold: Bootcamp Plus team project and OJT shortlist</li><li>QR code that opens a verification page</li></ul>
-        <p class="foot">A company certificate, not a TESDA or government credential.</p>
+        <div class="badges" aria-hidden="true"><span class="medal b">BRONZE</span><span class="medal s">SILVER</span><span class="medal g">GOLD</span></div>
+        <ul><li>Bronze: attend the 90-minute seminar</li><li>Silver: finish a 1-day bootcamp</li><li>Gold: Bootcamp Plus team project and an OJT referral shortlist</li><li>QR code that opens a verification page</li></ul>
+        <p class="foot">A company certificate, not a TESDA or government credential. OJT referrals depend on the host company.</p>
       </article>
       <article class="dip">
         <span class="who">EXAM BY ODOO S.A.</span>
         <h3>Odoo Certification prep</h3>
-        <img class="logo" src="assets/odoo-logo.png" alt="Odoo" width="120" height="38" loading="lazy">
-        <p>For Gold students and teachers. We coach the functional skills the official Odoo exam covers: sales, inventory, accounting and website.</p>
+        <p>For Gold-level students and their teachers. We coach the functional skills the official Odoo exam covers: sales, inventory, accounting and website.</p>
         <ul><li>Practice databases and mock questions</li><li>Study plan by Odoo version</li><li>Exam taken online on odoo.com</li></ul>
         <p class="foot">The exam fee is set and charged by Odoo. Passing is up to the candidate.</p>
       </article>
@@ -391,7 +439,7 @@ footer .brand img{height:24px}
       <article class="tk"><span class="rn">TRACK III</span><svg viewBox="0 0 48 48" aria-hidden="true"><rect class="d" pathLength="1" x="5" y="9" width="38" height="28" rx="3"/><path class="d" pathLength="1" d="M5 16h38M18 43h12M24 37v6"/></svg>
         <h3>Build a business website</h3><p>Pages, products and an online store with Odoo Website and eCommerce.</p><span class="for">ICT &middot; Arts and Design</span></article>
       <article class="tk"><span class="rn">TRACK IV</span><svg viewBox="0 0 48 48" aria-hidden="true"><path class="d" pathLength="1" d="M24 6l3.5 10.5L38 20l-10.5 3.5L24 34l-3.5-10.5L10 20l10.5-3.5z"/><path class="d" pathLength="1" d="M38 32l1.5 4.5L44 38l-4.5 1.5L38 44l-1.5-4.5L32 38l4.5-1.5z"/></svg>
-        <h3>AI tools for work</h3><p>Use AI assistants like Claude for research, writing and small automations, safely.</p><span class="for">All strands</span></article>
+        <h3>AI tools for work</h3><p>Use AI assistants like Claude for research, writing and small automations, safely.</p><span class="for">All strands incl. STEM &middot; HUMSS</span></article>
     </div>
   </div>
 </section>
@@ -402,9 +450,9 @@ footer .brand img{height:24px}
       <h2>Start big, then go <em>hands-on.</em></h2>
       <p>A seminar reaches the whole grade level. The bootcamp is for students who want to go further.</p></div>
     <div class="ladder">
-      <div class="step"><span class="n">LEVEL I</span><h3>Seminar</h3><p class="meta">90 minutes &middot; 100&ndash;500 students</p><p>Talk and live demo in the gym or AVR. Earns the Bronze badge.</p></div>
-      <div class="step"><span class="n">LEVEL II</span><h3>Bootcamp</h3><p class="meta">1 day &middot; 30&ndash;45 per batch</p><p>Hands-on in the computer lab, one track. Earns the Silver badge.</p></div>
-      <div class="step"><span class="n">LEVEL III</span><h3>Bootcamp Plus</h3><p class="meta">2 days &middot; team project</p><p>Build and present a small project. Gold badge, certification prep and an OJT shortlist.</p></div>
+      <div class="step"><span class="medal b" aria-hidden="true">BRONZE</span><span class="n">LEVEL I</span><h3>Seminar</h3><p class="meta">90 minutes &middot; 100&ndash;500 students</p><p>Talk and live demo in the gym or AVR. Earns the Bronze badge.</p></div>
+      <div class="step"><span class="medal s" aria-hidden="true">SILVER</span><span class="n">LEVEL II</span><h3>Bootcamp</h3><p class="meta">1 day &middot; 30&ndash;45 per batch</p><p>Hands-on in the computer lab, one track. Earns the Silver badge.</p></div>
+      <div class="step"><span class="medal g" aria-hidden="true">GOLD</span><span class="n">LEVEL III</span><h3>Bootcamp Plus</h3><p class="meta">2 days &middot; team project</p><p>Build and present a small project. Gold badge, certification prep and an OJT shortlist.</p></div>
     </div>
   </div>
 </section>
@@ -413,7 +461,7 @@ footer .brand img{height:24px}
   <div class="wrap">
     <div>
       <p class="eyebrow sc">For schools</p>
-      <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin:18px 0 32px">Four steps to a <em>bootcamp day.</em></h2>
+      <h2>Four steps to a <em>bootcamp day.</em></h2>
       <ol class="how">
         <li><b>Book a 20-minute visit</b>We meet the principal or SHS coordinator and agree on tracks and dates.</li>
         <li><b>Sign a simple MOA</b>One page covering dates, venue, safety and data privacy.</li>
@@ -423,30 +471,47 @@ footer .brand img{height:24px}
     </div>
     <div>
       <div class="card"><h3>What the school provides</h3>
-        <ul><li>A venue: gym or AVR for seminars, computer lab for bootcamps</li><li>A teacher or coordinator on site</li><li>Parent consent through the school's usual process</li></ul></div>
-      <div class="priv"><b>Student data stays minimal.</b> We collect name, school, grade, strand and an email for the certificate, following the Data Privacy Act (RA 10173). We never send sales messages to students.</div>
+        <ul><li>A venue: gym or AVR for seminars, computer lab for bootcamps</li><li>Lab computers with a browser and stable internet (Odoo runs online)</li><li>A teacher or coordinator on site</li><li>Parent consent through the school's usual process</li></ul></div>
+      <div class="priv" id="privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><b>Student data stays minimal.</b> We collect name, school, grade, strand and an email for the certificate, following the Data Privacy Act (RA 10173). We never send sales messages to students.</div>
     </div>
   </div>
 </section>
+
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow sc">Questions</p>
+      <h2>What principals <em>ask us first.</em></h2></div>
+    <div class="qa">
+      <details open><summary>Does it cost the school anything?</summary><p>The seminar and bootcamp sessions are free for partner schools. Nothing is charged to the school or students unless it is written into the MOA and agreed before the day. The official Odoo exam is optional, and its fee is set and charged by Odoo.</p></details>
+      <details><summary>What does the computer lab need?</summary><p>Computers with an up-to-date browser and a stable internet connection. Odoo and the AI tools run online, so nothing needs to be installed. One computer per student works best; pairs are fine.</p></details>
+      <details><summary>Who runs the sessions?</summary><p>Trainers from TechNext's Odoo and AI team. TechNext is headquartered in Singapore, has a team in the Philippines and has delivered 142 ERP projects for companies.</p></details>
+      <details><summary>Is the TechNext certificate accredited?</summary><p>No. It is a company certificate that shows what the student completed, with a QR code anyone can use to verify it. It is not a TESDA, DepEd or CHED credential.</p></details>
+      <details><summary>How many students can join?</summary><p>A seminar takes 100 to 500 students in the gym or AVR. A bootcamp batch is 30 to 45 students, so a 40-seat lab runs one batch a day.</p></details>
+      <details><summary>Does the OJT shortlist guarantee a placement?</summary><p>No. Gold-level students can be referred to companies we work with for OJT. Acceptance is always up to the host company.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="band" aria-hidden="true"><span>NOW BOOKING SCHOOL VISITS &#9733; JANUARY &ndash; FEBRUARY 2027 &#9733; NOW BOOKING SCHOOL VISITS &#9733; JANUARY &ndash; FEBRUARY 2027 &#9733;</span></div>
 
 <section class="cta" id="book">
   <div class="wrap">
     <div>
       <h2>Bring TechNext Academy <em>to your school.</em></h2>
-      <p>January and February 2027 dates are filling first. Tell us your school and we'll set a visit.</p>
+      <p>We're now scheduling school visits for January and February 2027. Tell us your school and we'll set a date.</p>
       <div class="ctas">
-        <a class="btn btn--primary" href="mailto:hello@technext.asia?subject=TechNext%20Academy%20school%20visit">Book a school visit <span class="arr" aria-hidden="true">&rarr;</span></a>
-        <a class="link" href="https://technext.asia">About TechNext</a>
+        <a class="btn btn--primary" href="mailto:hello@technext.asia?subject=TechNext%20Academy%20school%20visit&amp;body=School%20name%3A%0D%0ACity%20%2F%20province%3A%0D%0AGrade%20levels%20and%20strands%3A%0D%0APreferred%20month%3A%0D%0AContact%20person%20and%20number%3A%0D%0A">Book a school visit <span class="arr" aria-hidden="true">&rarr;</span></a>
       </div>
+      <p class="alt">No email app? Write to <a href="mailto:hello@technext.asia">hello@technext.asia</a> with your school name, city and preferred month.</p>
     </div>
-    <img src="assets/nexi-grad.webp" width="960" height="929" alt="" loading="lazy">
+    <img src="assets/nexi-grad.webp" srcset="assets/nexi-grad-640.webp 640w, assets/nexi-grad.webp 960w" sizes="(max-width:760px) 220px, 330px" width="960" height="929" alt="" loading="lazy">
   </div>
 </section>
 </main>
 
 <footer><div class="wrap">
   <a class="brand" href="#main" aria-label="TechNext Academy"><img src="assets/technext-horizontal-blue.svg" alt="TechNext" width="130" height="18"><span class="acad">ACADEMY</span></a>
-  <span>&copy; 2026 TechNext &middot; hello@technext.asia &middot; technext.asia</span>
+  <span>&copy; 2026 TechNext &middot; <a href="mailto:hello@technext.asia">hello@technext.asia</a> &middot; <a href="https://technext.asia">technext.asia</a> &middot; <a href="#privacy">Student data privacy</a></span>
 </div></footer>
 
 <script src="https://cdn.jsdelivr.net/npm/motion@12.23.12/dist/motion.js" defer></script>
@@ -462,49 +527,54 @@ footer .brand img{height:24px}
 
   var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   window.addEventListener('DOMContentLoaded',function(){
-    if(reduce||!window.Motion)return;
-    var M=window.Motion,root=document.documentElement,$=function(q){return document.querySelector(q)};
+    var root=document.documentElement;
+    if(reduce||!window.Motion){root.classList.remove('js-anim');return;}
+    var M=window.Motion,$=function(q){return document.querySelector(q)};
     root.classList.add('js-anim');
     var ease=[.2,.8,.2,1];
     /* entrance: eyebrow, varsity stamp per line, script writes on, then the rest */
     M.animate('.hero__copy .eyebrow',{opacity:[0,1],x:[-16,0]},{duration:.5,ease:ease});
     var lines=document.querySelectorAll('#hero-title .l');
     lines.forEach(function(l){l.style.opacity=0});
+    setTimeout(function(){lines.forEach(function(l){l.style.opacity=''})},2600);
     M.animate('#hero-title',{opacity:[0,1]},{duration:.01});
     lines.forEach(function(l,i){
       if(l.classList.contains('scr')){M.animate(l,{clipPath:['inset(0 100% 0 0)','inset(0 0% 0 0)'],opacity:[0,1]},{duration:.7,delay:.15+i*.16,ease:'easeOut'});return;}
       M.animate(l,{opacity:[0,1],scale:[1.35,1],filter:['blur(6px)','blur(0px)']},{duration:.42,delay:.15+i*.16,ease:[.3,1.4,.5,1]});
     });
     setTimeout(function(){M.animate('#hero-title',{x:[0,-4,4,-2,0]},{duration:.3})},880);
-    M.animate('.hero__copy .sub, .hero__copy .ctas, .hero__copy .proof',{opacity:[0,1],y:[18,0]},{duration:.6,delay:M.stagger(.1,{startDelay:.8}),ease:ease});
+    M.animate('.hero__copy .sub, .hero__copy .ctas',{opacity:[0,1],y:[18,0]},{duration:.6,delay:M.stagger(.1,{startDelay:.8}),ease:ease});
     M.animate('[data-in-visual]',{opacity:[0,1],scale:[.9,1],rotate:[-6,0]},{duration:1,delay:.3,ease:[.3,1.3,.5,1]});
     setTimeout(function(){root.classList.remove('js-anim')},2200);
-    /* count up */
-    document.querySelectorAll('[data-count]').forEach(function(b){var n=+b.dataset.count;M.animate(0,n,{duration:1.2,delay:1.1,ease:'easeOut',onUpdate:function(v){b.textContent=Math.round(v)}})});
     /* idle bob */
     document.querySelector('.nexi-wrap').animate([{translate:'0 0'},{translate:'0 -10px'},{translate:'0 0'}],{duration:4000,iterations:Infinity,easing:'ease-in-out',delay:1400});
     /* skill chips float around the badge edge, each on its own bob */
     var chips=[].slice.call(document.querySelectorAll('.chip'));
     M.animate(chips,{opacity:[0,1],scale:[.4,1]},{duration:.5,delay:M.stagger(.12,{startDelay:1.3}),ease:[.3,1.5,.5,1]});
-    chips.forEach(function(c,i){M.animate(c,{y:[0,i%2?-10:10,0],rotate:[i%2?-3:3,i%2?2:-2,i%2?-3:3]},{duration:3+i*.4,repeat:Infinity,ease:'easeInOut',delay:1.8+i*.3})});
+    setTimeout(function(){chips.forEach(function(c){c.classList.add('bob')});if(paused||offscreen)sync()},2200);
     /* the graduation: hop, cap toss with speed lines, comic burst, confetti, catch + glint */
     var cols=['#F2C94C','#3167CA','#16306B','#fff','#C9971C','#6FA0F5'],conf=$('.confetti');
     function confetti(){
+      if(paused||offscreen)return;
+      var k=innerWidth<900?.55:1;
       for(var i=0;i<30;i++){
         var c=document.createElement('i');c.style.background=cols[i%cols.length];conf.appendChild(c);
-        var dx=(Math.random()-.5)*520,up=-(140+Math.random()*200),rot=(Math.random()-.5)*900;
+        var dx=(Math.random()-.5)*520*k,up=-(140+Math.random()*200)*k,rot=(Math.random()-.5)*900;
         var an=c.animate([{opacity:1,transform:'translate(0,0) rotate(0deg)'},{opacity:1,transform:'translate('+dx*.6+'px,'+up+'px) rotate('+rot*.5+'deg)',offset:.4},{opacity:0,transform:'translate('+dx+'px,'+(up+380)+'px) rotate('+rot+'deg)'}],{duration:1800+Math.random()*600,easing:'ease-out'});
         an.onfinish=(function(e){return function(){e.remove()}})(c);
       }
     }
-    function graduate(){
-      if(document.hidden)return;
+    var hero=$('#hero'),held=[],paused=false,offscreen=false,runs=0;
+    function graduate(force){
+      if(document.hidden||paused||offscreen)return;
+      if(!force&&++runs>3)return;
+      var hi=innerWidth<900?'-40%':'-62%';
       var q=function(x){return document.querySelector(x)};
       q('.nexi-wrap').animate([{transform:'scale(1,1)'},{transform:'scale(1.08,.9)'},{transform:'scale(.95,1.08) translateY(-14px)'},{transform:'scale(1,1)'}],{duration:550,easing:'ease-out'});
       q('.nexi-wrap .cap').animate([
         {transform:'translate(0,0) rotate(0deg)',easing:'cubic-bezier(.2,.8,.3,1)'},
-        {transform:'translate(6%,-62%) rotate(-200deg)',offset:.38,easing:'linear'},
-        {transform:'translate(4%,-62%) rotate(-520deg)',offset:.55,easing:'cubic-bezier(.6,0,.9,.4)'},
+        {transform:'translate(6%,'+hi+') rotate(-200deg)',offset:.38,easing:'linear'},
+        {transform:'translate(4%,'+hi+') rotate(-520deg)',offset:.55,easing:'cubic-bezier(.6,0,.9,.4)'},
         {transform:'translate(0,0) rotate(-720deg)'}],{duration:1900,delay:180,fill:'both'});
       q('.speed').animate([{opacity:0,transform:'translateY(0)'},{opacity:1},{opacity:0,transform:'translateY(-20%)'}],{duration:600,delay:200});
       q('.pow').animate([
@@ -514,11 +584,20 @@ footer .brand img{height:24px}
         {opacity:0,transform:'scale(.6) rotate(4deg)'}],{duration:1700,delay:350,easing:'ease-out'});
       setTimeout(confetti,420);
       setTimeout(function(){
+        if(paused||offscreen)return;
         q('.nexi-wrap').animate([{transform:'scale(1,1)'},{transform:'scale(1.05,.94)'},{transform:'scale(1,1)'}],{duration:300});
         q('.glint').animate([{opacity:0,transform:'scale(.3) rotate(0deg)'},{opacity:1,transform:'scale(1.3) rotate(45deg)'},{opacity:0,transform:'scale(.6) rotate(90deg)'}],{duration:700});
       },2100);
     }
     setTimeout(graduate,1800);setInterval(graduate,7000);
+    $('.hero__visual').addEventListener('click',function(){graduate(true)});
+    /* pause control (WCAG 2.2.2) + pause while the hero is off screen */
+    var tog=$('.motion-toggle');tog.hidden=false;
+    function sync(){var stop=paused||offscreen;
+      if(stop){hero.getAnimations({subtree:true}).forEach(function(a){if(a.playState==='running'){a.pause();held.push(a)}})}
+      else{held.forEach(function(a){try{a.play()}catch(e){}});held=[]}}
+    tog.addEventListener('click',function(){paused=!paused;tog.setAttribute('aria-pressed',paused);tog.setAttribute('aria-label',paused?'Play animations':'Pause animations');sync()});
+    if('IntersectionObserver' in window){new IntersectionObserver(function(es){offscreen=!es[0].isIntersecting;sync()},{threshold:0}).observe(hero)}
     /* pointer parallax on the badge */
     var vis=$('.hero__visual');
     if(matchMedia('(pointer:fine)').matches){
@@ -526,6 +605,7 @@ footer .brand img{height:24px}
         var r=vis.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
         vis.style.transform='perspective(900px) rotateY('+(px*6)+'deg) rotateX('+(-py*6)+'deg)';
       });
+      vis.parentElement.addEventListener('pointerleave',function(){vis.style.transform=''});
     }
   });
 })();
